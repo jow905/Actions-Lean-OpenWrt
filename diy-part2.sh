@@ -9,7 +9,10 @@
 #============================================================
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.250/g' package/base-files/files/bin/config_generate
 
 # Modify hostname
 sed -i 's/LEDE/OpenWRT/g' package/base-files/files/bin/config_generate
+
+# Modify WiFi name (SSID)
+sed -i 's/LEDE/OpenWRT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
